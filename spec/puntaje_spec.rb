@@ -14,4 +14,14 @@ describe Puntaje do
 
 	end
 
+	it "quitar puntaje" do
+
+		puntaje = Puntaje.new
+
+		puntaje.quitarPuntaje("1", 15)
+		resultado = puntaje.mostrar
+		resultado.should == "85-100"
+
+	end
+
 end
