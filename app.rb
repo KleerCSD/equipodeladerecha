@@ -37,6 +37,9 @@ post '/patadajugador1' do
 	puntaje = session['puntaje']
 	puntaje.quitarPuntaje("2",17)
 	@puntaje = puntaje.mostrarVida
+    puntajes = @puntaje.split "-"
+    @puntajejugador1 = puntajes[0]
+	@puntajejugador2 = puntajes[1]
 	session['puntaje'] = puntaje
 	erb :juego
 end
@@ -45,6 +48,9 @@ post '/patadajugador2' do
 	puntaje = session['puntaje']
 	puntaje.quitarPuntaje("1",17)
 	@puntaje = puntaje.mostrarVida
+    puntajes = @puntaje.split "-"
+    @puntajejugador1 = puntajes[0]
+	@puntajejugador2 = puntajes[1]
 	session['puntaje'] = puntaje
 	erb :juego
 end

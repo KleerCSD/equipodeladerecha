@@ -1,13 +1,42 @@
-Jugador 1
+<table >
+<tr>
+<td>Jugador 1</td>
+<td>Jugador 2</td>
+</tr>
+<tr>
+<td>
 <form action="/patadajugador1" method="POST">
 <input type="submit" value="Patada Jugador 1" />
 </form>
-<br>
-<br>
-Jugador 2
+</td>
+<td>
 <form action="/patadajugador2" method="POST">
 <input type="submit" value="Patada Jugador 2" />
 </form>
-<%=@puntaje %>
+</td>
+</tr>
+<tr>
+<td>
+<form action="/punetejugador1" method="POST">
+<input type="submit" value="Puñete Jugador 1" />
+</form>
+</td>
+<td>
+<form action="/punetejugador2" method="POST">
+<input type="submit" value="Puñete Jugador 2" />
+</form>
+</td>
+</tr>
+<tr>
+<td>
+<div> Vida: <%=@puntajejugador1 %></div>
+</td>
+<td>
+<div> Vida: <%=@puntajejugador2 %></div>
+</td>
+</tr>
+</table>
+
+
 
 
