@@ -2,6 +2,10 @@ Given /^I open the web app$/ do
   visit '/'
 end
 
+Given /^I open the web juego$/ do
+  visit '/juego'
+end
+
 Given /^I post to the web app$/ do
   visit '/', :post, "field_name=value"
 end
