@@ -5,11 +5,14 @@ Feature: Recargar Energia
 
 Scenario: El juego comienza, y el jugador 1 recarga energia
 	Given I open punete
-	When I press "recargar energia j1"
-	Then I should see "20-10"
+	When I press "Recarga Energia J1"
+	Then I should see "20"
+	And I should see "10"
 
 
 Scenario: El juego comienza, y el jugador 2 recarga energia
 	Given I open punete
-	When I press "recargar energia j2"
-	Then I should see "10-20"
+	When I press "Recarga Energia J2"
+	Then I should see "10"
+	And I should see "20"
+
