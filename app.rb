@@ -9,8 +9,14 @@ get '/' do
 	erb :home
 end
 
-post '/' do
+post '/puntaje' do
 	puntaje = Puntaje.new
-	@puntaje = puntaje.mostrar
+	@puntaje = puntaje.mostrarVida
+	erb :home
+end
+
+post '/energia' do
+	puntaje = Puntaje.new
+	@puntaje = puntaje.mostrarEnergia
 	erb :home
 end
