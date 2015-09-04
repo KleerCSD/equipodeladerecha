@@ -50,10 +50,10 @@ end
 post '/patadajugador1' do
 	puntaje = session['puntaje']
 	puntaje.quitarPuntaje("2",17)
-	@puntaje = puntaje.mostrarVida
-    puntajes = @puntaje.split "-"
-    @puntajejugador1 = puntajes[0]
-	@puntajejugador2 = puntajes[1]
+    @puntajejugador1 = puntaje.getJugadorVida("1")
+	@puntajejugador2 = puntaje.getJugadorVida("2")
+	@energiajugador1 = puntaje.getJugadorEnergia("1")
+	@energiajugador2 = puntaje.getJugadorEnergia("2")
 	session['puntaje'] = puntaje
 	erb :juego
 end
@@ -61,10 +61,10 @@ end
 post '/patadajugador2' do
 	puntaje = session['puntaje']
 	puntaje.quitarPuntaje("1",17)
-	@puntaje = puntaje.mostrarVida
-    puntajes = @puntaje.split "-"
-    @puntajejugador1 = puntajes[0]
-	@puntajejugador2 = puntajes[1]
+    @puntajejugador1 = puntaje.getJugadorVida("1")
+	@puntajejugador2 = puntaje.getJugadorVida("2")
+	@energiajugador1 = puntaje.getJugadorEnergia("1")
+	@energiajugador2 = puntaje.getJugadorEnergia("2")
 	session['puntaje'] = puntaje
 	erb :juego
 end
@@ -72,17 +72,23 @@ end
 post '/punetej1' do
 	puntaje = session['puntaje']
 	puntaje.quitarPuntaje "2",15
-	@puntaje = puntaje.mostrarVida
+	@puntajejugador1 = puntaje.getJugadorVida("1")
+	@puntajejugador2 = puntaje.getJugadorVida("2")
+	@energiajugador1 = puntaje.getJugadorEnergia("1")
+	@energiajugador2 = puntaje.getJugadorEnergia("2")
 	session['puntaje'] = puntaje
-	erb :punete
+	erb :juego
 end
 
 post '/punetej2' do
 	puntaje = session['puntaje']
 	puntaje.quitarPuntaje "1",15
-	@puntaje = puntaje.mostrarVida
+	@puntajejugador1 = puntaje.getJugadorVida("1")
+	@puntajejugador2 = puntaje.getJugadorVida("2")
+	@energiajugador1 = puntaje.getJugadorEnergia("1")
+	@energiajugador2 = puntaje.getJugadorEnergia("2")
 	session['puntaje'] = puntaje
-	erb :punete
+	erb :juego
 end
 
 post '/resultadofinal' do

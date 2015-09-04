@@ -49,25 +49,18 @@ class Puntaje
 				@energia1 = 100	
 			
 			else
-
 				@energia1 = @energia1 + 10
-
 			end
 		else
 			if @energia2 == 100
-			
 				@energia2 = 100	
-			
 			else
-
 				@energia2 = @energia2 + 10
-
 			end
 		end
 	end
 
 	def verResultadoFinal
-
 		if @resultado1 <= 0
 			"Gano Jugador 2"
 		elsif @resultado2 <= 0
@@ -77,13 +70,20 @@ class Puntaje
 		end
 	end
 
-	def getResultado jugador
-
+	def getJugadorVida jugador
 		if jugador.eql? "1"
 			@resultado1
 		else
 			@resultado2
 		end
-
 	end
+
+	def getJugadorEnergia jugador
+		if jugador.eql? "1"
+			@energia1
+		else
+			@energia2
+		end
+	end
+
 end
