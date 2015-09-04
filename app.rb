@@ -132,6 +132,7 @@ post '/recargarenergiaj2' do
 	erb :juego
 end
 
+<<<<<<< HEAD
 post '/crearJuego' do
 	
 session['nombre1']=params["nombre1"]
@@ -142,4 +143,27 @@ session['tipo2']=params["tipo2"]
 	erb :juego
 end
 
+=======
+post '/energiaporvida1' do
+	puntaje = session['puntaje']	
+	puntaje.subirVida "1"
+	@puntajejugador1 = puntaje.getJugadorVida("1")
+	@puntajejugador2 = puntaje.getJugadorVida("2")
+	@energiajugador1 = puntaje.getJugadorEnergia("1")
+	@energiajugador2 = puntaje.getJugadorEnergia("2")
+	session['puntaje'] = puntaje
+	erb :juego
+end
+
+post '/energiaporvida2' do
+	puntaje = session['puntaje']	
+	puntaje.subirVida "2"
+	@puntajejugador1 = puntaje.getJugadorVida("1")
+	@puntajejugador2 = puntaje.getJugadorVida("2")
+	@energiajugador1 = puntaje.getJugadorEnergia("1")
+	@energiajugador2 = puntaje.getJugadorEnergia("2")
+	session['puntaje'] = puntaje
+	erb :juego
+end
+>>>>>>> 28be234ca97e641b605a05958586b1ebf0a0d217
 
