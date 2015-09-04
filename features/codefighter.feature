@@ -15,7 +15,7 @@ Scenario: Inicio de Juego, jugador2 da una patada y la vida del jugador1 disminu
 	Then I should see "83"
 	And I should see "100"
 
-Scenario: Inicio de Juego, jugador1 da una patada y el jugador 2 da una patada entonces disminuye en 17 de vida de ambos
+Scenario: Inicio de Juego, jugador1 da una patada y el jugador2 da una patada entonces disminuye en 17 de vida de ambos
 	Given I open the web juego
 	When I press "Patada Jugador 1" 
 	And I press "Patada Jugador 2" 

@@ -70,7 +70,7 @@ describe Puntaje do
 	it "obtener vida de jugador 1" do
 
 		puntaje = Puntaje.new
-		resultado = puntaje.getResultado("1")
+		resultado = puntaje.getJugadorVida("1")
 		resultado.should == 100
 
 	end
@@ -78,7 +78,7 @@ describe Puntaje do
 	it "obtener vida de jugador 2" do
 
 		puntaje = Puntaje.new
-		resultado = puntaje.getResultado("2")
+		resultado = puntaje.getJugadorVida("2")
 		resultado.should == 100
 
 	end
