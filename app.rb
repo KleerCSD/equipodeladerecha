@@ -123,3 +123,25 @@ post '/recargarenergiaj2' do
 	erb :juego
 end
 
+post '/energiaporvida1' do
+	puntaje = session['puntaje']	
+	puntaje.subirVida "1"
+	@puntajejugador1 = puntaje.getJugadorVida("1")
+	@puntajejugador2 = puntaje.getJugadorVida("2")
+	@energiajugador1 = puntaje.getJugadorEnergia("1")
+	@energiajugador2 = puntaje.getJugadorEnergia("2")
+	session['puntaje'] = puntaje
+	erb :juego
+end
+
+post '/energiaporvida2' do
+	puntaje = session['puntaje']	
+	puntaje.subirVida "2"
+	@puntajejugador1 = puntaje.getJugadorVida("1")
+	@puntajejugador2 = puntaje.getJugadorVida("2")
+	@energiajugador1 = puntaje.getJugadorEnergia("1")
+	@energiajugador2 = puntaje.getJugadorEnergia("2")
+	session['puntaje'] = puntaje
+	erb :juego
+end
+
