@@ -14,6 +14,13 @@ get '/juego' do
 	erb :juego
 end
 
+
+get '/punete' do
+	session['puntaje'] = Puntaje.new
+	erb :punete
+end
+
+
 post '/puntaje' do
 	puntaje = Puntaje.new
 	@puntaje = puntaje.mostrarVida
@@ -47,6 +54,28 @@ post '/patadajugador2' do
 	@puntaje = puntaje.mostrarVida
 	session['puntaje'] = puntaje
 	erb :juego
+end
+
+post '/punetej1' do
+	puntaje = session['puntaje']
+	puntaje.quitarPuntaje "2",15
+	@puntaje = puntaje.mostrarVida
+	session['puntaje'] = puntaje
+	erb :punete
+end
+
+post '/punetej2' do
+	puntaje = session['puntaje']
+	puntaje.quitarPuntaje "1",15
+	@puntaje = puntaje.mostrarVida
+	session['puntaje'] = puntaje
+	erb :punete
+end
+
+
+post '/recargarenergia' do
+	
+	erb :punete
 end
 
 
