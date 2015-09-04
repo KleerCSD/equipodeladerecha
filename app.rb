@@ -13,15 +13,22 @@ get '/juego' do
 	erb :juego
 end
 
-post '/' do
+post '/puntaje' do
 	puntaje = Puntaje.new
-	@puntaje = puntaje.mostrar
+	@puntaje = puntaje.mostrarVida
 	erb :home
 end
 
-post '/patada' do
+post '/energia' do
 	puntaje = Puntaje.new
-	@puntaje = puntaje.mostrar
+	@puntaje = puntaje.mostrarEnergia
+	erb :home
+end
+
+post '/patadajugador1' do
+	puntaje = Puntaje.new
+	puntaje.quitarPuntaje("2",17)
+	@puntaje = puntaje.mostrarVida
 	erb :juego
 end
 

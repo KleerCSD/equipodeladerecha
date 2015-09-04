@@ -7,4 +7,3 @@ Scenario: mostrar puntaje
 	Given I open the web app
 	When I press "MostrarPuntaje"
 	Then I should see "100-100"
-
