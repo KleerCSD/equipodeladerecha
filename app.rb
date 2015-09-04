@@ -10,6 +10,7 @@ get '/' do
 end
 
 get '/juego' do
+	session['puntaje'] = Puntaje.new
 	erb :juego
 end
 
@@ -21,14 +22,32 @@ end
 
 post '/energia' do
 	puntaje = Puntaje.new
-	@puntaje = puntaje.mostrarEnergia
+	@energia = puntaje.mostrarEnergia
+	erb :home
+end
+
+post '/recargavida' do
+	puntaje = Puntaje.new
+	puntaje.subirVida("1") 
+	@puntaje = puntaje.mostrarVida
 	erb :home
 end
 
 post '/patadajugador1' do
-	puntaje = Puntaje.new
+	puntaje = session['puntaje']
 	puntaje.quitarPuntaje("2",17)
 	@puntaje = puntaje.mostrarVida
+	session['puntaje'] = puntaje
 	erb :juego
 end
+
+post '/patadajugador2' do
+	puntaje = session['puntaje']
+	puntaje.quitarPuntaje("1",17)
+	@puntaje = puntaje.mostrarVida
+	session['puntaje'] = puntaje
+	erb :juego
+end
+
+
 
