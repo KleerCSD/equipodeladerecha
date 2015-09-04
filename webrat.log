@@ -878,3 +878,28 @@ D, [2015-09-04T17:18:06.677292 #4908] DEBUG -- : REQUESTING PAGE: POST /puntaje 
 D, [2015-09-04T17:18:06.688841 #4908] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
 D, [2015-09-04T17:18:06.691133 #4908] DEBUG -- : REQUESTING PAGE: POST /resultadofinal with {} and HTTP headers {"HTTP_REFERER"=>"/"}
 >>>>>>> 28be234ca97e641b605a05958586b1ebf0a0d217
+D, [2015-09-04T17:26:08.133754 #4774] DEBUG -- : REQUESTING PAGE: GET /juego with {} and HTTP headers {}
+D, [2015-09-04T17:26:08.173370 #4774] DEBUG -- : REQUESTING PAGE: POST /patadajugador1 with {} and HTTP headers {"HTTP_REFERER"=>"/juego"}
+D, [2015-09-04T17:26:08.178913 #4774] DEBUG -- : REQUESTING PAGE: GET /juego with {} and HTTP headers {}
+D, [2015-09-04T17:26:08.181686 #4774] DEBUG -- : REQUESTING PAGE: POST /patadajugador2 with {} and HTTP headers {"HTTP_REFERER"=>"/juego"}
+D, [2015-09-04T17:26:08.185435 #4774] DEBUG -- : REQUESTING PAGE: GET /juego with {} and HTTP headers {}
+D, [2015-09-04T17:26:08.200612 #4774] DEBUG -- : REQUESTING PAGE: POST /patadajugador1 with {} and HTTP headers {"HTTP_REFERER"=>"/juego"}
+D, [2015-09-04T17:26:08.205129 #4774] DEBUG -- : REQUESTING PAGE: POST /patadajugador2 with {} and HTTP headers {"HTTP_REFERER"=>"/patadajugador1"}
+D, [2015-09-04T17:26:08.210340 #4774] DEBUG -- : REQUESTING PAGE: GET /principal with {} and HTTP headers {}
+D, [2015-09-04T17:26:08.215086 #4774] DEBUG -- : REQUESTING PAGE: POST /crearJuego with {"nombre1"=>"Claudia", "tipo1"=>"desarrollador", "nombre2"=>"Miguel", "tipo2"=>"tester"} and HTTP headers {"HTTP_REFERER"=>"/principal"}
+D, [2015-09-04T17:26:08.231523 #4774] DEBUG -- : REQUESTING PAGE: GET /punete with {} and HTTP headers {}
+D, [2015-09-04T17:26:08.234183 #4774] DEBUG -- : REQUESTING PAGE: POST /punetej1 with {} and HTTP headers {"HTTP_REFERER"=>"/punete"}
+D, [2015-09-04T17:26:08.239061 #4774] DEBUG -- : REQUESTING PAGE: GET /punete with {} and HTTP headers {}
+D, [2015-09-04T17:26:08.241149 #4774] DEBUG -- : REQUESTING PAGE: POST /punetej2 with {} and HTTP headers {"HTTP_REFERER"=>"/punete"}
+D, [2015-09-04T17:26:08.258870 #4774] DEBUG -- : REQUESTING PAGE: GET /punete with {} and HTTP headers {}
+D, [2015-09-04T17:26:08.261225 #4774] DEBUG -- : REQUESTING PAGE: POST /recargarenergiaj1 with {} and HTTP headers {"HTTP_REFERER"=>"/punete"}
+D, [2015-09-04T17:26:08.266211 #4774] DEBUG -- : REQUESTING PAGE: GET /punete with {} and HTTP headers {}
+D, [2015-09-04T17:26:08.268919 #4774] DEBUG -- : REQUESTING PAGE: POST /recargarenergiaj2 with {} and HTTP headers {"HTTP_REFERER"=>"/punete"}
+D, [2015-09-04T17:26:08.273607 #4774] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2015-09-04T17:26:08.275459 #4774] DEBUG -- : REQUESTING PAGE: POST /recargavida with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+D, [2015-09-04T17:26:08.278881 #4774] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2015-09-04T17:26:08.286639 #4774] DEBUG -- : REQUESTING PAGE: POST /energia with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+D, [2015-09-04T17:26:08.296557 #4774] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2015-09-04T17:26:08.298599 #4774] DEBUG -- : REQUESTING PAGE: POST /puntaje with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+D, [2015-09-04T17:26:08.302058 #4774] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
+D, [2015-09-04T17:26:08.304043 #4774] DEBUG -- : REQUESTING PAGE: POST /resultadofinal with {} and HTTP headers {"HTTP_REFERER"=>"/"}
