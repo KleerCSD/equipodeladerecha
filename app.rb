@@ -49,5 +49,18 @@ post '/patadajugador2' do
 	erb :juego
 end
 
+post '/resultadofinal' do
+	puntaje = Puntaje.new
+	puntaje.quitarPuntaje("2",17)
+	puntaje.quitarPuntaje("2",17)
+	puntaje.quitarPuntaje("2",17)
+	puntaje.quitarPuntaje("2",17)
+	puntaje.quitarPuntaje("2",17)
+	puntaje.quitarPuntaje("2",17)
+	puntaje.quitarPuntaje("2",17)
+	@resultadofinal = puntaje.verResultadoFinal
+	erb :home
+end
+
 
 
