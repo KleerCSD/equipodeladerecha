@@ -22,8 +22,9 @@ post '/energia' do
 end
 
 post '/recargavida' do
-	#puntaje = Puntaje.new
-	@puntaje = "110-100"
+	puntaje = Puntaje.new
+	puntaje.subirVida("1") 
+	@puntaje = puntaje.mostrarVida
 	erb :home
 end
 

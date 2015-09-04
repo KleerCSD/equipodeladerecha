@@ -39,4 +39,16 @@ class Puntaje
 		"#{@energia1}-#{@energia2}" 
 	end
 
+	def subirVida jugador
+		
+		if jugador.eql? "1" 
+			@resultado1 = @resultado1 + @energia1
+			@energia1 = 0
+		else
+			@resultado2 = @resultado2 + @energia2
+			@energia2 = 0
+		end
+
+	end
+
 end

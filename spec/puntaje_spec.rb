@@ -45,4 +45,14 @@ describe Puntaje do
 		resultado.should == "20-10"
 
 	end
+
+	it "Recargar Vida" do
+
+		puntaje = Puntaje.new
+
+		puntaje.subirVida("1")
+		resultado = puntaje.mostrarVida
+		resultado.should == "110-100"
+
+	end
 end
