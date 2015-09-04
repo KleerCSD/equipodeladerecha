@@ -1,5 +1,36 @@
+
+<h2>CODE FIGHTER</h2>
+
 <form action="/crearJuego" method="post">
-	<input type="text" name="nombre1" >
-	<input type="text" name="nombre2" >
-	<input type="submit" value="Crear" >
+
+<table>
+<tr>
+<td>Nombre Jugador1: </td>
+<td><input type="text" name="nombre1"></td>
+<td>Tipo: </td>
+<td>
+<select name="tipo1">
+<option value="analista">analista</option>
+<option value="desarrollador">desarrollador</option>
+<option value="tester">tester</option>
+<option value="product owner">product owner</option>
+<option value="scrum master">scrum master</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Nombre Jugador2: </td>
+<td><input type="text" name="nombre2"></td>
+<td>Tipo: </td>
+<td><select name="tipo2">
+<option value="analista">analista</option>
+<option value="desarrollador">desarrollador</option>
+<option value="tester">tester</option>
+<option value="product owner">product owner</option>
+<option value="scrum master">scrum master</option>
+</select></td>
+</tr>
+
+</table>
+<input type="submit" value="Crear" >
 </form>

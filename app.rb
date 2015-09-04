@@ -24,6 +24,8 @@ get '/principal' do
 	session['puntaje'] = Puntaje.new
 	session['nombre1'] = ""
 session['nombre2'] = ""
+session['tipo1'] = ""
+session['tipo2'] = ""
 	erb :principal
 end
 
@@ -124,6 +126,8 @@ post '/crearJuego' do
 	
 session['nombre1']=params["nombre1"]
 session['nombre2']=params["nombre2"]
+session['tipo1']=params["tipo1"]
+session['tipo2']=params["tipo2"]
 	
 	erb :juego
 end

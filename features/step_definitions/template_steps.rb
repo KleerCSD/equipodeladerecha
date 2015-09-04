@@ -30,6 +30,10 @@ When /^I fill "(.*)" with "(.*)"$/ do |field, value|
   fill_in(field, :with => value)
 end
 
+When /^I select "(.*)" with "(.*)"$/ do |field, value|
+  select value, :from =>field
+end
+
 When /^I press "(.*)"$/ do |name|
   click_button(name)
 end
