@@ -32,9 +32,17 @@ describe Puntaje do
 		resultado = puntaje.mostrarEnergia
 
 	#Assert
-		resultado.should == "100-100"
+		resultado.should == "10-10"
 
 	end
 
+	it "subir energia" do
 
+		puntaje = Puntaje.new
+
+		puntaje.subirEnergia("1", 10)
+		resultado = puntaje.mostrarEnergia
+		resultado.should == "20-10"
+
+	end
 end
