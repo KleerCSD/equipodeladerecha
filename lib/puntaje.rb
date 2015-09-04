@@ -76,4 +76,14 @@ class Puntaje
 			"Peleando"
 		end
 	end
+
+	def getResultado jugador
+
+		if jugador.eql? "1"
+			@resultado1
+		else
+			@resultado2
+		end
+
+	end
 end
