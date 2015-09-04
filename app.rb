@@ -11,6 +11,10 @@ end
 
 get '/juego' do
 	session['puntaje'] = Puntaje.new
+	@puntajejugador1 = session['puntaje'].getJugadorVida("1")
+	@puntajejugador2 = session['puntaje'].getJugadorVida("2")
+	@energiajugador1 = session['puntaje'].getJugadorEnergia("1")
+	@energiajugador2 = session['puntaje'].getJugadorEnergia("2")
 	erb :juego
 end
 
@@ -109,17 +113,23 @@ end
 post '/recargarenergiaj1' do
 	puntaje = session['puntaje']	
 	puntaje.subirEnergia "1"
-	@puntajeEnergia = puntaje.mostrarEnergia
+	@puntajejugador1 = puntaje.getJugadorVida("1")
+	@puntajejugador2 = puntaje.getJugadorVida("2")
+	@energiajugador1 = puntaje.getJugadorEnergia("1")
+	@energiajugador2 = puntaje.getJugadorEnergia("2")
 	session['puntaje'] = puntaje
-	erb :punete
+	erb :juego
 end
 
 post '/recargarenergiaj2' do
 	puntaje = session['puntaje']	
 	puntaje.subirEnergia "2"
-	@puntajeEnergia = puntaje.mostrarEnergia
+	@puntajejugador1 = puntaje.getJugadorVida("1")
+	@puntajejugador2 = puntaje.getJugadorVida("2")
+	@energiajugador1 = puntaje.getJugadorEnergia("1")
+	@energiajugador2 = puntaje.getJugadorEnergia("2")
 	session['puntaje'] = puntaje
-	erb :punete
+	erb :juego
 end
 
 post '/crearJuego' do

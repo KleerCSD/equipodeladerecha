@@ -72,17 +72,33 @@ class Puntaje
 
 	def getJugadorVida jugador
 		if jugador.eql? "1"
-			@resultado1
+			if @resultado1 < 0
+				"0"
+			else
+			   @resultado1
+			end
 		else
-			@resultado2
+			if @resultado2 < 0
+				"0"
+			else
+			   @resultado2
+			end
 		end
 	end
 
 	def getJugadorEnergia jugador
 		if jugador.eql? "1"
-			@energia1
+			if @energia1 < 0
+				"0"
+			else
+			   @energia1
+			end
 		else
-			@energia2
+			if @energia2 < 0
+				"0"
+			else
+			   @energia2
+			end
 		end
 	end
 
