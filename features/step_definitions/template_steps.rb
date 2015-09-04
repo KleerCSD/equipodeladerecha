@@ -10,6 +10,10 @@ Given /^I open punete$/ do
   visit '/punete'
 end
 
+Given /^I open principal$/ do
+  visit '/principal'
+end
+
 Given /^I post to the web app$/ do
   visit '/', :post, "field_name=value"
 end

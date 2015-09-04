@@ -20,6 +20,13 @@ get '/punete' do
 	erb :punete
 end
 
+get '/principal' do
+	session['puntaje'] = Puntaje.new
+	session['nombre1'] = ""
+session['nombre2'] = ""
+	erb :principal
+end
+
 
 post '/puntaje' do
 	puntaje = Puntaje.new
@@ -106,4 +113,13 @@ post '/recargarenergiaj2' do
 	session['puntaje'] = puntaje
 	erb :punete
 end
+
+post '/crearJuego' do
+	
+session['nombre1']=params["nombre1"]
+session['nombre2']=params["nombre2"]
+	
+	erb :juego
+end
+
 
